@@ -1,0 +1,4 @@
+- name: This is roboshop main file
+  hosts: all
+  roles:
+    - demo

@@ -1,0 +1,13 @@
+- name: Nginx installation
+  ansible.builtin.yum:
+    name: nginx
+    state: installed
+- name: downloading and unziping
+    ansible.builtin.unarchive:
+      src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+      dest: /tmp/
+      remote_src: yes
+- name: Another symbolic mode example, adding some permissions and removing others
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/roboshop
+    dest: /user/roboshop/frontend/
